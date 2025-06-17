@@ -1,4 +1,5 @@
 
-document.getElementById("greeting").textContent = "hi there!";
+document.getElementById("greeting").textContent = "This there this is the example text!";
 
-document.getElementById(" ").textContent = " ";
+document.getElementById("h1").textContent = " This is the text i changed ";
+
