@@ -15,7 +15,7 @@ console.log(header);
 const red = document.querySelectorAll(".redclass");
 console.log(red);
 
-document.getElementById("click").addEventListener("click" ,funciton());
+document.getElementById("click").addEventListener("click" ,function()
 {
     alert("CLICKED BUTTON!");
-}
+});
