@@ -42,22 +42,34 @@
                 text.style.opacity = 1;
                 text.style.transform = `translate(${x}px, ${y}px)`;
             });
-            <script>
+            </script>
 
-  function animate() {
-    // Apply easing for trailing effect
-    const speed = 0.1; // lower is slower
-    textX += (mouseX - textX) * speed;
-    textY += (mouseY - textY) * speed;
+    <script>
+        const text = document.getElementById('cursor-text');
 
-    text.style.transform = `translate(${textX}px, ${textY}px)`;
+        let mouseX = 0, mouseY = 0;
+        let textX = 0, textY = 0;
 
-    requestAnimationFrame(animate);
-  }
+        // Track the current mouse position
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX + 10; // offset to not cover the cursor
+            mouseY = e.clientY + 10;
+        });
 
-  animate(); // start the animation loop
-</script>
-        </script>
+        function animate() {
+            // Apply easing for trailing effect
+            const speed = 0.1; // lower is slower
+            textX += (mouseX - textX) * speed;
+            textY += (mouseY - textY) * speed;
+
+            text.style.transform = `translate(${textX}px, ${textY}px)`;
+
+            requestAnimationFrame(animate);
+        }
+
+        animate(); // start the animation loop
+    </script>
+            
 
     </body>
 </html>
