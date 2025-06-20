@@ -1,21 +1,15 @@
-
-document.getElementById("greeting").textContent = "This there this is the example text!";
-
-document.getElementById("h1").textContent = " This is the text i changed ";
-
-let items = document.getElementsByClassName("redclass");
-for ( let i = 0; i < items.length; i++)
+function setup()
 {
-    items[i].textContent= "text change";
+    createCanvas(400,400);
+    background(220);
+}
+function draw()
+{
+    PointerEvent(100,100);
+    line(0,0,400,400);
+    rect(100,0,100,100)
+    rect(0,0,100,100)
+    rect()
+    rect()
 
 }
-const header = document.querySelector("h1");
-console.log(header);
-
-const red = document.querySelectorAll(".redclass");
-console.log(red);
-
-document.getElementById("click").addEventListener("click" ,function()
-{
-    alert("CLICKED BUTTON!");
-});
