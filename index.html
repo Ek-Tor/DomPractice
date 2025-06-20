@@ -31,21 +31,18 @@
         <h1>
             Practice
         </h1>
-      <div id="cursor-text" style="position: fixed; pointer-events: none; opacity: 1; z-index: 9999;">
-  Follow Me!
-</div>
+       <div id="cursor-text" style="position: fixed; pointer-events:fill; opacity: 0;">Follow Me!</div>
 
-<script>
-  const text = document.getElementById('cursor-text');
+        <script>
+            document.addEventListener('mousemove', function(e) {
+                const text = document.getElementById('cursor-text');
+                const x = e.clientX;
+                const y = e.clientY;
 
-  let mouseX = 0, mouseY = 0;
-  let textX = 0, textY = 0;
-
-  // Track the current mouse position
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX + 10; // offset to not cover the cursor
-    mouseY = e.clientY + 10;
-  });
+                text.style.opacity = 1;
+                text.style.transform = `translate(${x}px, ${y}px)`;
+            });
+            <script>
 
   function animate() {
     // Apply easing for trailing effect
@@ -60,7 +57,7 @@
 
   animate(); // start the animation loop
 </script>
-
+        </script>
 
     </body>
 </html>
