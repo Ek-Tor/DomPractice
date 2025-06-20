@@ -10,9 +10,37 @@
             <script src="script.js"></script>
         </head>
 
+        <style>
+            body{
+                font-family:arial, helvetica,san-serif;
+                margin:0;
+                background-color:#333;
+                color:#fff;
+                overflow:hidden;
+            }
+            #cursor-text{
+                position:absolute;
+                font-size:24px;
+                white -space: nowrap;
+                pointer-events: noen;
+                transition:opacity 0.5s transform 0.5s;
+            }
+        </style>
+
     <body>
         <h1>
             Practice
         </h1>
+        <div id=""cursor-text">Follow Me!</div>
+        <script>
+            const text= dpcumemnt.getElementById("cirsor=text");
+            const x= e.clientx;
+            const y= e.clienty;
+
+            text.style.opacity = 1;
+            text.style.transform = 'translate(${x}px, ${y}px)
+        });
+
+        </script>
     </body>
 </html>
