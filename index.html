@@ -10,7 +10,7 @@
             <script src="script.js"></script>
         </head>
 
-        <style>
+      <!--  <style>
             body{
                 font-family:arial, helvetica,san-serif;
                 margin:0;
@@ -43,7 +43,7 @@
                 text.style.transform = `translate(${x}px, ${y}px)`;
             });
             </script>
-
+-->
     <script>
         const text = document.getElementById('cursor-text');
 
@@ -58,7 +58,7 @@
 
         function animate() {
             // Apply easing for trailing effect
-            const speed = 0.025; // lower is slower
+            const speed = 0.5; // lower is slower
             textX += (mouseX + textX) * speed;
             textY += (mouseY + textY) * speed;
 
