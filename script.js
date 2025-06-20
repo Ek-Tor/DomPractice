@@ -28,11 +28,12 @@ function drawAxes()
         text("x",width/2 * 10, -10);
         text("x",width/2 * 10, -10);
         */
-        for(let x = -400; x <= 400; x+10)
+        for(let x = -400; x <= 400; x+=10)
         {
             stroke(0);
             strokeWeight(x% 100 === 0 ? 2: 1);
-            line(x !=== 0 && x % ===0)
+            line (x, -5, x, 5);
+            if (x !=== 0 && x % ===0)
             {
                 noStroke();
                 text(x,x,15);
