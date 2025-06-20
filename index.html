@@ -31,16 +31,18 @@
         <h1>
             Practice
         </h1>
-        <div id=""cursor-text">Follow Me!</div>
+       <div id="cursor-text" style="position: fixed; pointer-events: none; opacity: 0;">Follow Me!</div>
+
         <script>
-            const text= dpcumemnt.getElementById("cirsor=text");
-            const x= e.clientx;
-            const y= e.clienty;
+            document.addEventListener('mousemove', function(e) {
+                const text = document.getElementById('cursor-text');
+                const x = e.clientX;
+                const y = e.clientY;
 
-            text.style.opacity = 1;
-            text.style.transform = 'translate(${x}px, ${y}px)
-        });
-
+                text.style.opacity = 1;
+                text.style.transform = `translate(${x}px, ${y}px)`;
+            });
         </script>
+
     </body>
 </html>
