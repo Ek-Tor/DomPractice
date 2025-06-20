@@ -59,8 +59,8 @@
         function animate() {
             // Apply easing for trailing effect
             const speed = 0.025; // lower is slower
-            textX -= (mouseX - textX) * speed;
-            textY -= (mouseY - textY) * speed;
+            textX += (mouseX + textX) * speed;
+            textY += (mouseY + textY) * speed;
 
             text.style.transform = `translate(${textX}px, ${textY}px)`;
 
